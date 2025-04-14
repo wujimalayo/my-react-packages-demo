@@ -1,5 +1,5 @@
 import { useMemo, useRef, useEffect, MouseEvent } from "react";
-import styles from "./styles.module.scss";
+import "./styles.scss";
 import { BAR_MAP } from "./config";
 
 interface BarProps {
@@ -105,9 +105,9 @@ const Bar = ({
     <div
       onMouseDown={handleClickTrack}
       className={[
-        hidden && !isMouseDown.current && styles["uni-scrollbar-bar__hidden"],
-        styles["uni-scrollbar-bar"],
-        styles[`uni-scrollbar-${type}`],
+        hidden && !isMouseDown.current && "uni-scrollbar-bar__hidden",
+        "uni-scrollbar-bar",
+        `uni-scrollbar-${type}`,
       ]
         .filter(Boolean)
         .join(" ")}
@@ -118,7 +118,7 @@ const Bar = ({
           [bar.size]: length,
           transform: `translate${bar.axis}(${translateValue}px)`,
         }}
-        className={styles["uni-scrollbar-bar-thumb"]}
+        className={"uni-scrollbar-bar-thumb"}
       ></div>
     </div>
   );

@@ -6,8 +6,7 @@ import {
   useState,
   UIEventHandler,
 } from "react";
-import styles from "./styles.module.scss";
-// import useListenElementResize from "./hooks/useListenElementResize";
+import "./styles.scss";
 import useResizeObserver from "./hooks/useResizeObserver";
 import Bar from "./bar";
 
@@ -78,13 +77,13 @@ const UniScrollBar = ({
 
   return (
     <div
-      className={styles["uni-scrollbar"]}
+      className={"uni-scrollbar"}
       onPointerEnter={() => setHiddenBar(false)}
       onPointerLeave={() => setHiddenBar(true)}
     >
       <div
         ref={wrapperRef}
-        className={styles["uni-scrollbar-wrapper"]}
+        className={"uni-scrollbar-wrapper"}
         style={{
           ...wraperStyle,
           height,
@@ -94,7 +93,7 @@ const UniScrollBar = ({
       >
         <div
           ref={contentRef}
-          className={styles["uni-scrollbar-content"]}
+          className={"uni-scrollbar-content"}
           style={{
             ...contentStyle,
           }}
