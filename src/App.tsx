@@ -6,7 +6,7 @@ function App() {
   return (
     <UniScrollbar
       height={400}
-      wraperStyle={{
+      style={{
         width: 300,
       }}
     >

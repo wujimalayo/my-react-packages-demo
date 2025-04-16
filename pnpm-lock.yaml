@@ -15,8 +15,8 @@ importers:
         specifier: ^19.0.0
         version: 19.1.0(react@19.1.0)
       react-uni-scrollbar:
-        specifier: ^1.1.0
-        version: 1.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: ^1.2.0
+        version: 1.2.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
     devDependencies:
       '@eslint/js':
         specifier: ^9.21.0
@@ -948,8 +948,8 @@ packages:
     resolution: {integrity: sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==}
     engines: {node: '>=0.10.0'}
 
-  react-uni-scrollbar@1.1.0:
-    resolution: {integrity: sha512-HUXuE7dSyr/HNfu/77Ye60GQtPnSGg46PmR5RGLS2Qi/dKBLMIbfKPnaW8Ii9mRHQdAdw8knBJM/JnjV9bODPg==}
+  react-uni-scrollbar@1.2.0:
+    resolution: {integrity: sha512-/wjuM2d6LtupBPqdPabjJrqfvTw0rjXNJ4VmtkRlDxOptwopC9eGs3wv1LDLfSsMMnuOODw/jGGbN+8ZtJTYlA==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -2083,7 +2083,7 @@ snapshots:
 
   react-refresh@0.14.2: {}
 
-  react-uni-scrollbar@1.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  react-uni-scrollbar@1.2.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
