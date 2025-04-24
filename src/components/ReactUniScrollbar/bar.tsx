@@ -70,9 +70,15 @@ const Bar = ({
     const event = e as MouseEvent;
     const distance = scrollDistance.current + event[bar.movement] / ratio;
     // 计算后的滚动距离小于0则不需要触发更新
-    if (distance <= 0) return;
+    if (distance < 0) return;
     // 计算后的滚动距离大于可滚动的最大值也不需要触发更新
-    if (distance >= (sizeInfo[bar.contentLength] - 4) * (1 - ratio)) return;
+    if (
+      distance >
+      sizeInfo.marginSum +
+        sizeInfo[bar.contentLength] -
+        sizeInfo[bar.wrapperLength]
+    )
+      return;
     scrollDistance.current =
       scrollDistance.current + event[bar.movement] / ratio;
     onScroll(scrollDistance.current, bar.scroll);
@@ -102,8 +108,8 @@ const Bar = ({
     <div
       onMouseDown={handleClickTrack}
       className={[
-        hidden && !isMouseDown.current && "uni-scrollbar-bar__hidden",
-        "uni-scrollbar-bar",
+        hidden && !isMouseDown.current && "uni-scrollbar-track__hidden",
+        "uni-scrollbar-track",
         `uni-scrollbar-${type}`,
       ]
         .filter(Boolean)
@@ -115,7 +121,7 @@ const Bar = ({
           [bar.size]: length,
           transform: `translate${bar.axis}(${translateValue}px)`,
         }}
-        className={"uni-scrollbar-bar-thumb"}
+        className={"uni-scrollbar-thumb"}
       ></div>
     </div>
   );

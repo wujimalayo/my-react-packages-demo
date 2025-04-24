@@ -1,6 +1,6 @@
-import { UniScrollbar } from "react-uni-scrollbar";
-import 'react-uni-scrollbar/dist/main.css'
-// import { UniScrollbar } from "./components/ReactUniScrollbar";
+// import { UniScrollbar } from "react-uni-scrollbar";
+// import 'react-uni-scrollbar/dist/main.css'
+import { UniScrollbar } from "./components/ReactUniScrollbar";
 
 function App() {
   return (
